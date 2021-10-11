@@ -1,0 +1,11 @@
+.todo-item {
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+  font-size: 28px;
+  margin: 20px 0;
+  text-align: center;
+}
+.todo-item.active {
+  text-decoration: line-through;
+  opacity: .3;
+}
