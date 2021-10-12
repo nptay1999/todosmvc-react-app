@@ -1,11 +1,38 @@
 .todo-item {
+  display: flex;
+  align-items: center;
+  width: inherit;
+  padding: 20px 0;
   font-family: Roboto, sans-serif;
   font-weight: 300;
   font-size: 28px;
-  margin: 20px 0;
-  text-align: center;
+  transition: 250ms all ease-in-out;
+  border-bottom: 1px solid rgb(226, 226, 226);
+}
+.todo-item .check {
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  flex-grow: 40px;
+  opacity: .5;
+}
+.todo-item span {
+  flex-grow: 1;
+}
+.todo-item .close {
+  margin-right: 10px;
+  margin-right: 10px;
+  visibility: hidden;
+  cursor: pointer;
+  opacity: .5;
+}
+.todo-item:hover .close {
+  visibility: visible;
 }
 .todo-item.active {
   text-decoration: line-through;
   opacity: .3;
+}
+.todo-item.active .check {
+  opacity: 1;
 }

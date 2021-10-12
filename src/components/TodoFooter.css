@@ -1,0 +1,56 @@
+.footer {
+  display: flex;
+  padding: 10px 10px;
+  align-items: center;
+  font-size: 14px;
+  color: rgb(119, 119, 119);
+  z-index: 999;
+}
+.footer .footer-center {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+.footer .footer-center button {
+  color: rgb(119, 119, 119);
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 5px 7px;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.footer .footer-center button:hover {
+  border: 1px solid rgb(228, 228, 228);
+}
+.footer .footer-center button.active {
+  border: 1px solid rgb(228, 228, 228);
+}
+.footer .footer-right {
+  cursor: pointer;
+}
+.footer .footer-right:hover {
+  text-decoration: underline;
+}
+footer {
+  display: block;
+  position: relative;
+  height: 0;
+  visibility: hidden;
+  z-index: -1;
+}
+footer::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 50px;
+  overflow: hidden;
+  box-shadow: 0 1px 1px rgb(0 0 0 / 20%), 0 8px 0 -3px #f6f6f6, 
+  0 9px 1px -3px rgb(0 0 0 / 20%), 
+  0 16px 0 -6px #f6f6f6, 
+  0 17px 2px -6px rgb(0 0 0 / 20%);
+  visibility: visible
+}
